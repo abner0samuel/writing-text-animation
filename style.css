@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#home{
+    margin-top: 20rem;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex ; */
+    gap: 50px;
+}
+body{
+    background: black;
+}
+.home_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+}
+.textmotion{
+    display: inline-flex;
+}
+.textmotion .home_text{
+    color: #0a2add;
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow:  #a1fc6dbb 10px 5px 10px 10px;
+}
+.textmotion .txt{
+    margin-left: 15px;
+    height:90px; 
+    line-height: 90px; 
+    /* background: red; */
+    overflow: hidden;
+    transition: all ease-in-out;
+}
+.txt li{
+    color: #FC6D6D;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: silde 6s steps(4) infinite;
+}
+@keyframes  silde {
+    100%{
+       top: -360px;
+    }
+}
+.txt li span{
+    position: relative;
+}
+
+.txt li span::after{
+    content: "  ";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(2, 2, 2);
+    border-left: 1px solid  #FC6D6D;
+    animation: tying 1s steps(14) infinite;
+}
+@keyframes  tying{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px ;
+    }
+}
+
+
+
